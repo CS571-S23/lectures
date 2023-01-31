@@ -304,7 +304,7 @@ When doing CSS, prefer external over inline!
 </div>
 ```
 
-[StackBlitz](https://stackblitz.com/edit/web-platform-rszwvq)
+[StackBlitz](https://stackblitz.com/edit/web-platform-yf1bfx)
 
 ---
 
@@ -326,7 +326,7 @@ When doing CSS, prefer external over inline!
 </style>
 ```
 
-[StackBlitz](https://stackblitz.com/edit/web-platform-yf1bfx)
+[StackBlitz](https://stackblitz.com/edit/web-platform-rszwvq)
 
 ---
 
