@@ -5,6 +5,7 @@ const DO_IMPERATIVE = true;
 // They do the same thing, but one is imperative
 // while the other is declarative.
 if (DO_IMPERATIVE) {
+    console.log("Doing operations IMPERATIVELY...")
     fetch('https://cs571.org/s23/week2/api/cole', {
         headers: {
             "X-CS571-ID": "bid_00000000000000000000"
@@ -25,32 +26,26 @@ if (DO_IMPERATIVE) {
             console.log(color)
         }
 
-        // Note: THIS IS AN ARRAY.
-        const semesterData = data.creditHistory;
-        let moreThan15Creds = [];
-        for (const sem of semesterData) {
+        console.log("Semesters with more than 15 credits...");
+        for (const sem of data.creditHistory) {
             if(sem.cred > 15) {
-                moreThan15Creds.push(sem);
+                console.log(sem.semester)
             }
         }
-        console.log("Semesters with more than 15 credits...");
-        console.log(moreThan15Creds);
     
         // Note: THIS IS AN OBJECT.
         const plants = data.plants;
-        let numAlive = 0;
-        let numPlants = 0;
+        let alivePlants = [];
         for (const plant in plants) {
-            numPlants += 1;
-            const poorPlant = plants[plant]
-            if (poorPlant.alive) {
-                numAlive += 1;
+            if(plants[plant].alive) {
+                alivePlants.push(plant);
             }
         }
-        console.log("Plant survivorship probability...");
-        console.log(numAlive / numPlants);
+        console.log("Surviving plants...")
+        console.log(alivePlants);
     });
 } else {
+    console.log("Doing operations DECLARATIVELY...")
     fetch('https://cs571.org/s23/week2/api/cole', {
         headers: {
             "X-CS571-ID": "bid_00000000000000000000"
@@ -67,15 +62,18 @@ if (DO_IMPERATIVE) {
         document.getElementById('person-name').textContent = data.name
         
         console.log("Favorite colors...");
-        data.favColors.forEach(color => console.log(color));
+        data.favColors.forEach((color) => console.log(color));
 
         console.log("Semesters with more than 15 credits...");
-        console.log(data.creditHistory.filter(sem => sem.cred > 15));
-    
+        data.creditHistory
+            .filter(sem => sem.cred > 15)
+            .forEach(sem => console.log(sem.semester));
+        
+        console.log("Surviving plants...");
         // Note: THIS IS AN OBJECT.
-        const plants = Object.keys(data.plants);
-        console.log("Plant survivorship probability...");
-        console.log(plants.filter(p => data.plants[p].alive).length / plants.length);
+        const plantNames = Object.keys(data.plants);
+        const alivePlants = plantNames.filter(name => data.plants[name].alive)
+        console.log(alivePlants);
     });
 }
 
