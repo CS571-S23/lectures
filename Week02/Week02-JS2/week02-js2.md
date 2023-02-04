@@ -485,6 +485,8 @@ const nameLengths = ["Bessy", "Rob", "Bartholomew"].map(n => n.length);
 console.log(nameLengths);
 ```
 
+[StackBlitz](https://stackblitz.com/edit/js-ec76dv?file=index.js)
+
 ---
 
 ### Chaining Declarative Functions
@@ -515,6 +517,8 @@ Of those with short names, what are their names and do they have a *very* short 
     }
   });
 ```
+
+[StackBlitz](https://stackblitz.com/edit/js-vqxu8y?file=index.js)
 
 ---
 
