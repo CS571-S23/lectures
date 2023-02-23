@@ -279,7 +279,7 @@ The context can be used by any of child, grandchild, great-grandchild, etc. comp
 
 ```jsx
 function SomeChildComponent() {
-  const [data, setData] = useContext(MyData);
+  const [data, setData] = useContext(MyDataContext);
   return (
     { /* Do something interesting with data here! */ }
   );
