@@ -418,7 +418,7 @@ Storing the result so you can use it next time instead of calculating the same t
 ###
 
 `useCallback` to memoize functions
-`useCallback` to memoize calculated values
+`useMemo` to memoize calculated values
 `memo` to memoize components
 
 ---
