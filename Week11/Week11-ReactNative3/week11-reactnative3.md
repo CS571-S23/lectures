@@ -416,7 +416,7 @@ const SocialTabs = createBottomTabNavigator();
 ### Drawer Navigation
 
 ```javascript
-const SocialDrawer = createBottomTabNavigator();
+const SocialDrawer = createDrawerNavigator();
 
 <NavigationContainer>
   <SocialDrawer.Navigator>
