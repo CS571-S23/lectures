@@ -341,7 +341,7 @@ We'll cover `async` / `await` in DialogFlow!
 ---
 
 # Secure Storage
-[CS571-ifying](https://snack.expo.dev/) the expo-secure-store example.
+[CS571-ifying](https://snack.expo.dev/@ctnelson1997/secure-store) the expo-secure-store example.
 
 **Use your phone,** not the web!
 
